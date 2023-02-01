@@ -10,9 +10,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     if id:
         try:
-            url = "mongodb://02mongodb:T5uP2Y8c9QRHjTs6m7yCnKGOyNuDX5oXDgVJLridO1QW1Df4oUUHwB0hliYrJBUNBsxfeRFPT4OQACDb2kLbww==@02mongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@02mongodb@"  # TODO: Update with appropriate MongoDB connection information
+            url = "mongodb://project2db:zQsMezwZp10JBAVg3DRJbc4UxbzBOXFAQuzJP0ysJBuYBr3tkZ9W93dhXsuHYMrrr4BlRwwxDwFTACDbxih9EA==@project2db.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@project2db@"  # TODO: Update with appropriate MongoDB connection information
             client = pymongo.MongoClient(url)
-            database = client['nigborlydb']
+            database = client['proj2DB']
             collection = database['posts']
 
             query = {'_id': ObjectId(id)}
